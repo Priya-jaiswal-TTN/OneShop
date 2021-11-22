@@ -1,0 +1,50 @@
+.product-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-img {
+  position: relative;
+  border: 1px solid #d7d7d7;
+  margin-right: 10px;
+  width: 45%;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.product-dec {
+  width: 55%;
+}
+
+.product-dec a {
+  text-decoration: none;
+  color: #000;
+}
+
+.product-dec p {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.product-img img {
+  width: 90%;
+}
+
+.product-section {
+  padding-top: 50px;
+}
+
+/* button on prduct img */
+
+.btn-hover {
+  display: none;
+  position: absolute;
+  bottom: 5%;
+  left: 15%;
+  padding: 5px 15px;
+  font-size: 12px;
+}
+
+img:hover + .btn-hover,
+.btn-hover:hover {
+  display: block;
+}

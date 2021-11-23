@@ -1,6 +1,12 @@
 import "./HeroSection.css";
 
-const HeroSection = () => {
+const HeroSection = (props) => {
+  const searchHandler = (event) => {
+    event.preventDefault();
+    // setSearchValue(event.target.value);
+    props.onSearch(event.target.value);
+  };
+
   return (
     <div className="hero-section">
       <div className="container">
@@ -16,6 +22,7 @@ const HeroSection = () => {
               type="search"
               placeholder="Search..."
               aria-label="Search"
+              onChange={searchHandler}
             />
           </form>
         </div>

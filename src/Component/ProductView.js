@@ -1,7 +1,21 @@
 import "./ProductView.css";
+import { useParams } from "react-router";
 import ProductImage from "../Assets/p1.1.jpg";
+import ProductData from "../storage/product.json";
 
 const ProductView = () => {
+  const { id } = useParams();
+
+  const selectedProduct = ProductData.filter((item) => {
+    if (item.id === id) {
+      return item;
+    }
+  });
+
+  const imagesOfProduct = selectedProduct[0].images;
+
+  // console.log("filtered item==>", selectedProduct);
+
   return (
     <section class="Product-view">
       <div class="container">
@@ -13,8 +27,22 @@ const ProductView = () => {
               data-bs-ride="false"
             >
               <div class="carousel-indicators">
+                {/* {imagesOfProduct.map((img) => {
+                  let counter = 0;
+                  return (
+                    <img
+                      src={img}
+                      alt=""
+                      data-bs-target="#carouselExampleIndicators"
+                      data-bs-slide-to={counter}
+                      class="active"
+                      aria-current="true"
+                      aria-label={`Slide ${counter + 1}`}
+                    />
+                  );
+                })} */}
                 <img
-                  src={ProductImage}
+                  src={imagesOfProduct[0]}
                   alt=""
                   data-bs-target="#carouselExampleIndicators"
                   data-bs-slide-to="0"
@@ -23,14 +51,14 @@ const ProductView = () => {
                   aria-label="Slide 1"
                 />
                 <img
-                  src={ProductImage}
+                  src={imagesOfProduct[1]}
                   alt=""
                   data-bs-target="#carouselExampleIndicators"
                   data-bs-slide-to="1"
                   aria-label="Slide 2"
                 />
                 <img
-                  src={ProductImage}
+                  src={imagesOfProduct[2]}
                   alt=""
                   data-bs-target="#carouselExampleIndicators"
                   data-bs-slide-to="2"
@@ -38,14 +66,33 @@ const ProductView = () => {
                 />
               </div>
               <div class="carousel-inner">
+                {/* {imagesOfProduct.map((img) => {
+                  return (
+                    <div class="carousel-item active">
+                      <img src={img} class="d-block w-100" alt="..." />
+                    </div>
+                  );
+                })} */}
                 <div class="carousel-item active">
-                  <img src={ProductImage} class="d-block w-100" alt="..." />
+                  <img
+                    src={imagesOfProduct[0]}
+                    class="d-block w-100"
+                    alt="..."
+                  />
                 </div>
                 <div class="carousel-item">
-                  <img src={ProductImage} class="d-block w-100" alt="..." />
+                  <img
+                    src={imagesOfProduct[1]}
+                    class="d-block w-100"
+                    alt="..."
+                  />
                 </div>
                 <div class="carousel-item">
-                  <img src={ProductImage} class="d-block w-100" alt="..." />
+                  <img
+                    src={imagesOfProduct[2]}
+                    class="d-block w-100"
+                    alt="..."
+                  />
                 </div>
               </div>
               <button
@@ -75,7 +122,7 @@ const ProductView = () => {
             </div>
           </div>
           <div class="col col-lg-6 product-details">
-            <h2>Product Title</h2>
+            <h2>{selectedProduct[0].name}</h2>
             <div class="stars">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -85,7 +132,7 @@ const ProductView = () => {
               <span>5 Reviews</span>
             </div>
             <div class="other-details">
-              <p>$1232</p>
+              <p>${selectedProduct[0].price}</p>
               <select name="cars" id="cars">
                 <option value="volvo">Volvo</option>
                 <option value="saab">Saab</option>
@@ -93,10 +140,7 @@ const ProductView = () => {
                 <option value="audi">Audi</option>
               </select>
             </div>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus
-              nobis ratione enim numquam, saepe consequuntur.
-            </p>
+            <p>{selectedProduct[0].description}</p>
             <button class="btn btn-dark">ADD TO CART</button>
           </div>
         </div>

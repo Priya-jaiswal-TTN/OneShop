@@ -12,7 +12,6 @@ import ProductView from "./Component/ProductView";
 // console.log(ProductData);
 
 const App = () => {
-  const [filteredProduct, setFilteredProduct] = useState([]);
   const [searchValue, setSearchValue] = useState("");
 
   const onSearchHandler = (productName) => {

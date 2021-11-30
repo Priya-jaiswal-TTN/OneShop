@@ -1,9 +1,11 @@
 import { NavLink } from "react-router-dom";
+import { connect } from "react-redux";
 import "./Header.css";
 
-const Header = () => {
+const Header = (props) => {
+  const cartQuantity = props.item.length;
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark sticky-top bg-dark">
       <div className="container">
         <NavLink className="navbar-brand" to="/home">
           OneShop
@@ -50,7 +52,7 @@ const Header = () => {
                   <i className="fas fa-shopping-cart"></i>
                 </span>
                 <span>Your Cart</span>
-                <span>0</span>
+                <span>{cartQuantity}</span>
               </NavLink>
             </li>
           </ul>
@@ -60,4 +62,9 @@ const Header = () => {
   );
 };
 
-export default Header;
+const mapStateToProps = (state) => {
+  // console.log("state in header==>", state);
+  return { item: state.item };
+};
+// export default Header;
+export default connect(mapStateToProps, null)(Header);

@@ -2,8 +2,17 @@ import React, { useState } from "react";
 import "./Product.css";
 import { Link } from "react-router-dom";
 import NoDataFound from "./NoDataFound";
+// import { addItem } from "../Action";
+// import { connect } from "react-redux";
+import AddToCartButton from "./Cart/AddToCartButton";
 
 const Product = (props) => {
+  // const addToCartHandler = (item) => {
+  //   console.log("item===>", item);
+  //   item = { ...item, quantity: 1 };
+  //   props.addItem(item);
+  // };
+
   return (
     <section class="product-section">
       <div class="container">
@@ -15,9 +24,19 @@ const Product = (props) => {
                   <div class="product-box">
                     <div class="product-img">
                       <img src={item.images[0]} alt="product image" />
-                      <button class="btn btn-dark btn-hover">
+                      <AddToCartButton
+                        class="btn btn-dark btn-hover"
+                        // cartHandler={addToCartHandler}
+                        item={item}
+                      />
+                      {/* <button
+                        class="btn btn-dark btn-hover"
+                        onClick={() => {
+                          addToCartHandler(item);
+                        }}
+                      >
                         ADD TO CART
-                      </button>
+                      </button> */}
                     </div>
                     <div class="product-dec">
                       <Link to={`/product/${item.id}`}>
@@ -38,5 +57,10 @@ const Product = (props) => {
     </section>
   );
 };
+
+// const mapDispatchtoProps = {
+//   addItem,
+// };
+// export default connect(null, mapDispatchtoProps)(Product);
 
 export default Product;

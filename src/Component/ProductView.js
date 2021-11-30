@@ -2,6 +2,7 @@ import "./ProductView.css";
 import { useParams } from "react-router";
 import ProductImage from "../Assets/p1.1.jpg";
 import ProductData from "../storage/product.json";
+import AddToCartButton from "./Cart/AddToCartButton";
 
 const ProductView = () => {
   const { id } = useParams();
@@ -141,7 +142,8 @@ const ProductView = () => {
               </select>
             </div>
             <p>{selectedProduct[0].description}</p>
-            <button class="btn btn-dark">ADD TO CART</button>
+            {/* <button class="btn btn-dark">ADD TO CART</button> */}
+            <AddToCartButton class="btn btn-dark" item={selectedProduct[0]} />
           </div>
         </div>
       </div>

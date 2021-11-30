@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Footer from "./Component/Footer";
 import HeroSection from "./Component/HeroSection";
 import Product from "./Component/Product";
-import CartHeader from "./Component/Cart/CartHeader";
+import Cart from "./Component/Cart/Cart";
 import ProductView from "./Component/ProductView";
 
 // console.log(ProductData);
@@ -39,7 +39,7 @@ const App = () => {
         <Route path="/home" element={<Product product={newData} />} />
       </Routes>
       <Routes>
-        <Route path="/cart" element={<CartHeader />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
       <Routes>
         <Route path="/product/:id" element={<ProductView />} />

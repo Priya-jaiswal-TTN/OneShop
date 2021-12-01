@@ -1,4 +1,4 @@
-import OopsImg from "../Assets/Nodatafound.jpg";
+import OopsImg from "../../Assets/Nodatafound.jpg";
 import "./NoDataFound.css";
 
 const NoDataFound = () => {

@@ -31,3 +31,9 @@
 .success-content h3 {
   font-size: 40px;
 }
+
+@media (max-width: 768px) {
+  .success-content p {
+    display: none;
+  }
+}

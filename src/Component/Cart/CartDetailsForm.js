@@ -1,6 +1,9 @@
+import { useState } from "react";
 import "./CartDetailsForm.css";
 
 const CartDetailsForm = () => {
+  // const [enterName, setEnteredName] = useState("");
+
   return (
     <form action="#">
       <div class="user-name">
@@ -36,12 +39,12 @@ const CartDetailsForm = () => {
         <input type="tel" name="phone" id="phone" placeholder="Phone Number" />
       </div>
       <div class="row shipping">
-        <div class="col col-lg-5 free">
+        <div class="col-lg-5 col-md-5 free">
           <input type="radio" name="shipping" id="free-shipping" />
           <label for="free-shipping">Free Shipping</label>
           <span>Between 2-5 working days</span>
         </div>
-        <div class="col col-lg-5 paid">
+        <div class="col-lg-5 col-md-5 paid">
           <input type="radio" name="shipping" id="paid-shipping" />
           <label for="paid-shipping">Next Day Delivery-$20</label>
           <span>24 hours from checkout</span>

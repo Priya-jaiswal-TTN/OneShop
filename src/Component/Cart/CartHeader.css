@@ -18,3 +18,9 @@
 .section-shopping-head .active {
   border-bottom: 2px solid #000;
 }
+
+@media (max-width: 991px) {
+  .section-shopping-head {
+    display: none;
+  }
+}

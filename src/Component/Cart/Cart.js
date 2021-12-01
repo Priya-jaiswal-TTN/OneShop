@@ -63,7 +63,7 @@ const Cart = (props) => {
           <section class="shopping-cart">
             <div class="container">
               <div class="row">
-                <div class="col col-lg-8 cartItem">
+                <div class="col-lg-8 cartItem">
                   <h2>{cartHeading[page]}</h2>
                   {cartUpdateComponent[page]}
                   <div class="actions">
@@ -85,7 +85,7 @@ const Cart = (props) => {
                     </button>
                   </div>
                 </div>
-                <div class="col col-lg-4 CartSummary">
+                <div class="col-lg-4 CartSummary">
                   <h2>Summary</h2>
                   {page === 0 && (
                     <input

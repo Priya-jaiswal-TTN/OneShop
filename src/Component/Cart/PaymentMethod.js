@@ -25,20 +25,20 @@ const PaymentMethod = () => {
             type="text"
             name="card"
             id="card"
-            class="col col-lg-6"
+            class="col-lg-6 col-md-6"
             placeholder="0000 0000 0000 0000"
           />
           <input
             type="text"
             name="year"
-            class="col col-lg-2"
+            class="col-lg-2 col-md-2 col-sm-6 col-6"
             id="year"
             placeholder="MM/YY"
           />
           <input
             type="text"
             name="cvv"
-            class="col col-lg-2"
+            class="col-lg-2 col-md-2 col-sm-6 col-6"
             id="cvv"
             placeholder="CVV"
           />

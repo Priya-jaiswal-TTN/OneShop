@@ -33,6 +33,10 @@
   margin: 20px auto;
 }
 
+.cartEmpty img {
+  width: 75%;
+}
+
 .coupon {
   margin-left: 15px;
   font-size: 10px;

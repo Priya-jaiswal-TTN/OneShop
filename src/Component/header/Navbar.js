@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-import "./Header.css";
+import "./Navbar.css";
 
 const Header = (props) => {
   const cartQuantity = props.item.length;

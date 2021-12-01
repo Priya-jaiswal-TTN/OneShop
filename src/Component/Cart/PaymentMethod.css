@@ -48,3 +48,9 @@
 .cardDetails hr {
   margin-bottom: 0;
 }
+
+@media (max-width: 768px) {
+  .credit-card input {
+    margin-bottom: 10px;
+  }
+}

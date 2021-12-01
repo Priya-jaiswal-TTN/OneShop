@@ -11,6 +11,7 @@ const HeroSection = (props) => {
     <div className="hero-section">
       <div className="container">
         <div className="hero-section-content">
+          <h1>OneShop is a one-stop for Technology Lovers</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio harum
             ab animi voluptatem voluptate sit excepturi voluptatibus eius

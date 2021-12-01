@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./App.css";
-import Header from "./Component/Header";
+import Header from "./Component/header/Navbar";
 import ProductData from "./storage/product.json";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Footer from "./Component/Footer";
-import HeroSection from "./Component/HeroSection";
-import Product from "./Component/Product";
+import Footer from "./Component/footer/Footer";
+import HeroSection from "./Component/header/HeroSection";
+import Product from "./Component/Product/Product";
 import Cart from "./Component/Cart/Cart";
-import ProductView from "./Component/ProductView";
+import ProductView from "./Component/Product/ProductView";
 import Success from "./Component/Success";
 
 // console.log(ProductData);

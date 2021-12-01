@@ -1,8 +1,7 @@
 import "./ProductView.css";
 import { useParams } from "react-router";
-import ProductImage from "../Assets/p1.1.jpg";
-import ProductData from "../storage/product.json";
-import AddToCartButton from "./Cart/AddToCartButton";
+import ProductData from "../../storage/product.json";
+import AddToCartButton from "../Cart/AddToCartButton";
 
 const ProductView = () => {
   const { id } = useParams();
@@ -15,8 +14,6 @@ const ProductView = () => {
 
   const imagesOfProduct = selectedProduct[0].images;
 
-  // console.log("filtered item==>", selectedProduct);
-
   return (
     <section class="Product-view">
       <div class="container">
@@ -28,20 +25,6 @@ const ProductView = () => {
               data-bs-ride="false"
             >
               <div class="carousel-indicators">
-                {/* {imagesOfProduct.map((img) => {
-                  let counter = 0;
-                  return (
-                    <img
-                      src={img}
-                      alt=""
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to={counter}
-                      class="active"
-                      aria-current="true"
-                      aria-label={`Slide ${counter + 1}`}
-                    />
-                  );
-                })} */}
                 <img
                   src={imagesOfProduct[0]}
                   alt=""
@@ -67,13 +50,6 @@ const ProductView = () => {
                 />
               </div>
               <div class="carousel-inner">
-                {/* {imagesOfProduct.map((img) => {
-                  return (
-                    <div class="carousel-item active">
-                      <img src={img} class="d-block w-100" alt="..." />
-                    </div>
-                  );
-                })} */}
                 <div class="carousel-item active">
                   <img
                     src={imagesOfProduct[0]}
@@ -142,7 +118,6 @@ const ProductView = () => {
               </select>
             </div>
             <p>{selectedProduct[0].description}</p>
-            {/* <button class="btn btn-dark">ADD TO CART</button> */}
             <AddToCartButton class="btn btn-dark" item={selectedProduct[0]} />
           </div>
         </div>

@@ -5,6 +5,10 @@ import { updateItemQuantity, removeItem } from "../../Action";
 
 const CartItem = (props) => {
   const onQtyChangeHandler = (quantity, id) => {
+    console.log("quantity==>", quantity);
+    // if (quantity < 1) {
+    //   props.removeItem(id);
+    // }
     props.updateItemQuantity(quantity, id);
   };
 

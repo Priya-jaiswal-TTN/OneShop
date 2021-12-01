@@ -13,3 +13,11 @@
   color: #000;
   border-radius: 50%;
 }
+
+@media (max-width: 991px) {
+  .cart {
+    background-color: transparent;
+    border-radius: 0;
+    margin-left: -4px;
+  }
+}

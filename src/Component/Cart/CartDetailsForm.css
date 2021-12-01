@@ -5,7 +5,7 @@
   padding: 5px;
   margin: 15px 0;
   /* border-radius: 5px; */
-  margin-right: 10px;
+  margin-right: 14px;
 }
 
 .address input {
@@ -39,4 +39,18 @@
   display: block;
   margin-left: 47px;
   margin-top: 0px;
+}
+
+@media (max-width: 991px) {
+  .user-name input,
+  .country input,
+  .country select,
+  .address input {
+    width: 90%;
+    margin-left: 15px;
+  }
+  .shipping .free,
+  .shipping .paid {
+    border: none;
+  }
 }

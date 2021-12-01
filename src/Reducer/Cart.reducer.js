@@ -52,6 +52,10 @@ const CartReducer = (state = initialState, action) => {
       });
       return { ...state, item: updatedItems };
     }
+    case "EMPTY_CART": {
+      console.log("in empty cart reducer");
+      return { ...state, item: [] };
+    }
     default:
       return state;
   }

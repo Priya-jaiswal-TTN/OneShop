@@ -14,10 +14,17 @@ export const removeItem = (id) => {
 };
 
 export const updateItemQuantity = (quantity, id) => {
-  console.log("id and qnty in action==>", quantity, id);
   return {
     type: "UPDATE_QUANTITY",
     id,
     quantity,
+  };
+};
+
+export const emptyCart = () => {
+  console.log(" in action==>");
+
+  return {
+    type: "EMPTY_CART",
   };
 };

@@ -8,6 +8,7 @@ import HeroSection from "./Component/HeroSection";
 import Product from "./Component/Product";
 import Cart from "./Component/Cart/Cart";
 import ProductView from "./Component/ProductView";
+import Success from "./Component/Success";
 
 // console.log(ProductData);
 
@@ -43,6 +44,9 @@ const App = () => {
       </Routes>
       <Routes>
         <Route path="/product/:id" element={<ProductView />} />
+      </Routes>
+      <Routes>
+        <Route path="/success" element={<Success />} />
       </Routes>
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />

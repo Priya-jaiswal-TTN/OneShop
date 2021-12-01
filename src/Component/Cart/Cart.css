@@ -32,3 +32,13 @@
   text-align: center;
   margin: 20px auto;
 }
+
+.coupon {
+  margin-left: 15px;
+  font-size: 10px;
+  color: red;
+}
+
+.coupon.applied {
+  color: green;
+}

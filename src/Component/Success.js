@@ -1,6 +1,13 @@
 import "./Success.css";
+import { useNavigate } from "react-router";
 
 const Success = () => {
+  let navigate = useNavigate();
+
+  const continueShoppingHandler = () => {
+    navigate("/home");
+  };
+
   return (
     <div class="success">
       <div class="container">
@@ -11,7 +18,12 @@ const Success = () => {
             ab animi voluptatem voluptate sit excepturi voluptatibus eius
             veritatis quisquam.
           </p>
-          <button class="btn btn-outline-light">Continue Shopping</button>
+          <button
+            class="btn btn-outline-light"
+            onClick={continueShoppingHandler}
+          >
+            Continue Shopping
+          </button>
         </div>
       </div>
     </div>

@@ -15,11 +15,12 @@ const Cart = (props) => {
   const [page, setPage] = useState(0);
   const [couponCode, setCouponCode] = useState(false);
   const [couponIsTouched, setCouponIsTouched] = useState(false);
+  const [shippingFormInvalid, setShippingFormInvalid] = useState(true);
   let navigate = useNavigate();
 
   const cartUpdateComponent = [
     <CartItem items={props.state.item} />,
-    <CartDetailsForm />,
+    <CartDetailsForm onFormSubmit={setShippingFormInvalid} />,
     <PaymentMethod />,
   ];
 
@@ -29,6 +30,7 @@ const Cart = (props) => {
     let index = page;
     setPage(index + 1);
   };
+
   const backPageHandler = () => {
     let index = page;
     setPage(index - 1);
@@ -69,6 +71,7 @@ const Cart = (props) => {
                   <div class="actions">
                     <button
                       class="btn btn-dark"
+                      disabled={page === 1 && shippingFormInvalid}
                       onClick={
                         page === 2 ? payNowButtonHandler : nextPageHandler
                       }

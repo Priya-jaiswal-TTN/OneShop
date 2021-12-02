@@ -9,6 +9,7 @@ import Product from "./Component/Product/Product";
 import Cart from "./Component/Cart/Cart";
 import ProductView from "./Component/Product/ProductView";
 import Success from "./Component/Success";
+import About from "./Component/about/About";
 
 // console.log(ProductData);
 
@@ -47,6 +48,9 @@ const App = () => {
       </Routes>
       <Routes>
         <Route path="/success" element={<Success />} />
+      </Routes>
+      <Routes>
+        <Route path="/about" element={<About />} />
       </Routes>
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />

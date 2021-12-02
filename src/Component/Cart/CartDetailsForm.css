@@ -54,3 +54,11 @@
     border: none;
   }
 }
+
+.invalid {
+  border: 1px solid red;
+}
+
+.has-error {
+  color: red;
+}
